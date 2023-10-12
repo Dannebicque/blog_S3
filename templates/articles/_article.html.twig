@@ -1,0 +1,7 @@
+<h2>
+    {{ article.titre }}
+</h2>
+<p>{{ article.texte }}</p>
+<p>{{ article.datePublication|date('d/m/Y H:i') }}</p>
+<p>Auteur : {{ article.auteur }}</p>
+<p>Catégorie : {{ article.category != null ? article.category.titre : 'Pas de catégorie'}}</p>

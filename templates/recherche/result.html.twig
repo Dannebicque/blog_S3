@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    Vous avez recherché : {{ recherche }}
+
+    <h1>Recherche</h1>
+    {% for article in articles %}
+        {{ include('articles/_article.html.twig') }}
+    {% endfor %}
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+

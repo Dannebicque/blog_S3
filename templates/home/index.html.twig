@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <h1>Hello !</h1>
+    {{ include('articles/_article.html.twig') }}
+
+    <h2>Catégories</h2>
+    <ul>
+        {% for categorie in categories %}
+            <li>
+                <a href="{{ path('app_categorie', {categorie: categorie.id}) }}">
+                    {{ categorie.titre }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
